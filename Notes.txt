@@ -1,0 +1,20 @@
+Excel Problems 6/21/18
+#tsv to txt
+#add _batch to name
+#Sample Name space
+#Filename
+#Patient's Name
+#Processing Setting K capitalized
+#gender=Male Female Unspecified
+#remove well
+#Sample Type
+
+pyinstaller --onefile
+pyinstaller -e
+pip install -r requirements.txt
+
+    # if accession number is empty, sampleID becomes accession number
+    # change rename to : "SampleID": "Sample Name", "AccessionNumber": "Accession Number"
+    for cell in df["AccessionNumber"]:
+        if(cell==""):
+            df.loc[df['AccessionNumber']==cell,cell=df.loc[df['AccessionNumber']==cell,"SampleID"]
